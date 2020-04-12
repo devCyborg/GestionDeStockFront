@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'GestionStockFronEnd';
+  showHideSideBar: boolean= false;
+
+  onShowHideSideBar(showHideSideBar) {
+
+    this.showHideSideBar= showHideSideBar;
+  }
 }
