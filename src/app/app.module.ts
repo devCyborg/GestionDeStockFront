@@ -8,6 +8,8 @@ import {SidebarComponent} from './sidebar/sidebar.component';
 import {ContentComponent} from './content/content.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {AppRoutesModule} from "./app-routes/app-routes.module";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import {AppRoutesModule} from "./app-routes/app-routes.module";
   ],
   imports: [
     BrowserModule,
-    AppRoutesModule
+    AppRoutesModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

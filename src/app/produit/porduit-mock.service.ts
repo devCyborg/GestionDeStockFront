@@ -13,8 +13,6 @@ export class PorduitMockService {
     const p2 = new Produit("Cahier", 200, 5.50);
     const p3 = new Produit("Stylo", 500, 2.10);
     this._produits.push(p1,p2,p3);
-
-
   }
 
   public getProduits(): Produit[] {
