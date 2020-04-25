@@ -1,0 +1,28 @@
+<div class="">
+  <div class="card mb-3 ">
+    <div class="card-header text-white bg-dark ">Modifier un produit</div>
+    <div class="card-body ">
+      <h5 class="card-title">Inserer les nouvelles informations du produit</h5>
+      <form [formGroup]="produitForm" >
+        <div class="form-group">
+          <label for="referenceId">Reference </label>
+          <input disabled type="text" class="form-control" formControlName="reference" id="referenceId" aria-describedby="reference desc" placeholder="Enter reference"  required>
+        </div>
+        <div class="alert alert-danger" *ngIf="produitForm.get('reference').invalid && (produitForm.get('reference').dirty || produitForm.get('reference').touched)">Réference obligatoire</div>
+        <div class="form-group">
+          <label for="quantiteId">Quantite</label>
+          <input type="number"  class="form-control" formControlName="quantite"  id="quantiteId" placeholder="entrer la quantité" >
+        </div>
+
+        <div class="form-group">
+          <label for="prixId">Prix</label>
+          <input type="number"  class="form-control" formControlName="prixUnitaire"  id="prixId" placeholder="entrer le prix" >
+        </div>
+
+        <button (click)="modifierProduit()" type="submit" class="btn btn-success" [disabled]="produitForm.invalid || produitForm.pristine">Modifier</button>
+      </form>
+
+    </div>
+    <div class="card-footer bg-transparent ">Footer</div>
+  </div>
+</div>
